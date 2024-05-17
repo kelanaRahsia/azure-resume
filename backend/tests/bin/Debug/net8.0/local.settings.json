@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=getresumecounteramir;AccountKey=uEznefkkyGHW8MiPFTvb+MW1uXb8nIrvwVozZ1/YIz0mVq39BshdZR5ro+klAJIgD5+Tjz4ZR11A+AStHWAcew==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureResumeConnectionString": "AccountEndpoint=https://azureresume-amir.documents.azure.com:443/;AccountKey=xm0Vuh0UpIc7LegtUMVOaI92mkFLgsyGL3mResGh1OIIwzrWWPtN6KBywzP3TqOctOdTwoFkY548ACDbDIgcQw==;"
+  },
+  "Host":
+  {
+    "CORS" : "*"
+  }
+}
