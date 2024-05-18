@@ -36,6 +36,11 @@ jobs:
         dotnet build --configuration Release --output ./output
         popd
     
+    - name: 'List contents of backend directory'
+      shell: pwsh
+      run: |
+        Get-ChildItem -Path './backend'
+
     - name: 'Run Unit Test'
       shell: pwsh
       run: |
