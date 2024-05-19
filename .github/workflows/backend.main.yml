@@ -46,6 +46,16 @@ jobs:
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/tests'
           dotnet test
+          
+    - name: Retrieve publish profile for deployment
+      id: publishProfileRetrieval
+      run: |
+        publishProfiles=$(az webapp deployment list-publishing-profiles \
+          --name "<FUNCTION APP NAME>" \
+          --resource-group "<RESOURCE GROUP NAME>" \
+          --subscription "<SUBSCRIPTION ID>" --xml)
+        echo "::add-mask::$publishProfiles"
+        echo "::set-output name=publishProfiles::$publishProfiles"
 
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
